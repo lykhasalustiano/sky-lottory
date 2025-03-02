@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #49a1f0, #1f5b87);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    font-family: Impact, sans-serif;
+    background-color: #0d3b60;
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+}
+
+.signup-box {
+    background-color: #216a9c;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    text-align: center;
+}
+
+.signup-box label {
+    display: block;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.signup-box input {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    background-color: #86c0ff;
+    text-align: center;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 20px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.create-account-btn {
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    background-color: #61C4F9;
+    margin-top: 20px;
+}
+
+.create-account-btn:hover {
+    background-color: #0b4b89;
+}
+
+.create-account-btn:active {
+    top: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
