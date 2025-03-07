@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #284F61, #2b596d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #13537e;
+    padding: 15px 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.user-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-bar {
+    background: #287492;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.withdrawal-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.withdrawal-section h1 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section input {
+    width: 300px;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: white;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.withdrawal-section button {
+    width: 200px;
+    padding: 12px;
+    background: #0D4C91;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
+}
+
+.withdrawal-section button:hover {
+    background: #072F60;
+    transform: scale(1.05);
+}
+
+
+footer {
+    background: #13537e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .user-icon {
+        font-size: 24px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; 
+        gap: 15px;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+        padding: 5px;
+    
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-bar {
+        justify-content: right;
+        padding: 10px;
+    }
+
+    .withdrawal-section h1 {
+        font-size: 35px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .withdrawal-section input {
+        width: 300px;
+        padding: 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background: white;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .withdrawal-section button {
+        width: 180px;
+        padding: 8px;
+        background: #0D4C91;
+        color: white;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        margin: 20px auto;
+    }
+}
