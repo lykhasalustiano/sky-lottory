@@ -1,475 +1,340 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #284F61, #2b596d);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #13537e;
-    padding: 15px 30px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.user-icon {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 8px 12px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-
-.top-bar {
-    background: #287492;
-    padding: 10px 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-.balance {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to bottom, #1e5b84, #134a70);
-    padding: 8px 15px;
-    border-radius: 20px;
-    box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.2);
-    width: fit-content;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-.coin-icon {
-    font-size: 24px;
-    color: gold;
-    margin-right: 8px;
-}
-
-.balance i.fa-peso-sign {
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-.sidebar, .main-content, .right-panel {
-    padding: 20px;
-}
-
-.sidebar, .right-panel {
-    background: linear-gradient(to bottom, #1a4b84, #1a3659);
-    width: 25%;
-    text-align: center;
-}
-
-.main-content {
-    width: 50%;
-    background: #2b557d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.bet-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-button {
-    background: #3276b1;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #285e8e;
-}
-
-.bet-display {
-    font-size: 18px;
-    padding: 5px 10px;
-    margin: 0 5px;
-}
-
-.draw-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.number {
-    background: #4a90e2;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.lottery-numbers {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.lottery-box {
-    background: white;
-    width: 50px;
-    height: 60px;
-    border-radius: 5px;
-}
-
-.pot-money {
-    text-align: left;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-main {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 90%;
-    border-radius: 10px;
-}
-
-.bet-container{
-    width: 20%;
-    background: linear-gradient(to bottom, #195DA1, #09223B);
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    height: 100%;
-}
-
-.pot-money {
-    width: 20%;
-    background: linear-gradient(to bottom, #195DA1, #09223B);
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    height: 100%;
-}
-
-h2 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.bet-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-input[type="number"] {
-    width: 50px;
-    text-align: center;
-    font-size: 16px;
-    margin: 0 5px;
-}
-
-.game-area {
-    width: 55%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.number-slots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.slot {
-    width: 50px;
-    height: 60px;
-    background: white;
-    border-radius: 5px;
-}
-
-.timer {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.draw-section {
-    text-align: center;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.drawn-numbers {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.drawn-numbers span {
-    background: #4a90e2;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 16px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.pot-money ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.pot-money li {
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-
-
-footer {
-    background: #13537e;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    font-weight: bold;
-    border-top: 3px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 10%;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-    }
-
-    .user-icon {
-        font-size: 24px;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row; 
-        gap: 15px;
+@media (min-width: 200px) and (max-width: 500px) {
+    * {
+        margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
-    nav ul li a {
-        font-size: 24px;
-        padding: 5px;
-    }
-
-    .icon {
-        display: flex;
-        align-items: center;
-    }
-
-    .top-bar {
-        justify-content: right;
-        padding: 10px;
-    }
-
-    .balance {
-        font-size: 16px;
-        padding: 6px 12px;
-    }
-
-    .coin-icon {
-        font-size: 20px;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    h3 {
-        font-size: 15px;
-        font-weight: bold;
-    }
-    
-    .game-area {
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%;
-        max-width: 400px;
-    }
-
-    .bet-container, .pot-money{
-        background: linear-gradient(to bottom, #195DA1, #09223B);
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%;
-        max-width: 400px;
-    
-    }
-
-    
-    .bet-controls {
+    html, body {
+        width: 100%;
+        height: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+        overflow: scroll;
+    }
+
+    .container-bg {
+        width: 300px;
+        height: 568px;
+        position: relative;
+        overflow: hidden; 
+    }
+
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .box-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px; 
+        height: 90%;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto; 
+        max-height: 90vh;
+    }
+
+    #price-info img {
+        width: 40px;
+        height: 40px;
+        margin-left: 245px;
+        margin-top: 5px;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+
+    #price-info {
+        background-color: #DE2915;
+        position: absolute;
+        margin-bottom: 455px;
+        width: 300px;
     }
     
-    .bet-controls button, .bet-button {
-        background: #004b8d;
+    
+    #price-info p {
         color: white;
-        border: none;
-        padding: 10px 15px;
-        font-size: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-    
-    .bet-controls button:hover, .bet-button:hover {
-        background: #006bb3;
-    }
-    
-    .bet-controls input {
-        width: 45px;
+        font-family: sans-serif, Calibri;
         text-align: center;
-        font-size: 18px;
-        border: none;
-        padding: 5px;
-        border-radius: 5px;
+        font-size: 15px;
+        background-color: #B02213;
+        width: 150px;
+        height: 50px;
+        display: flex;  
+        align-items: center; 
+        justify-content: center; 
+        margin: 0; 
+        padding: 0; 
+        position: relative; 
     }
-    
-    .number-slots {
+
+    .num {
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin: 20px 0;
+        margin-bottom: 20px;
     }
-    
-    .slot {
+
+    #inp-num-1 {
+        top: 100px;
+        position: absolute;
+        margin-left: 230px;
         width: 35px;
-        height: 45px;
+        height: 50px;
         background: white;
         border-radius: 5px;
     }
-    
-    .timer {
-        font-size: 24px;
-        margin-bottom: 10px;
+
+    #inp-num-2 {
+        top: 100px;
+        position: absolute;
+        margin-right: 230px;
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
     }
-    
-    .draw-section {
+
+    #inp-num-3 {
+        top: 100px;
+        position: absolute;
+        margin-right: 140px;
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    #inp-num-4 {
+        top: 100px;
+        position: absolute;
+        margin-right: 50px;
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    #inp-num-5 {
+        top: 100px;
+        position: absolute;
+        margin-left: 50px;
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    #inp-num-6 {
+        top: 100px;
+        position: absolute;
+        margin-left: 140px;
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .num input {
+        width: 35px;
+        height: 50px;
+        background: white;
+        border-radius: 5px;
         text-align: center;
+        font-size: 20px; 
+        font-weight: bold; 
+        border: 2px solid #ccc;
+    }
+
+    .bet-box {
+        background-color: #B02213;
+        border-radius: 20px;
+        width: 225px;
+        height: 150px;
+        padding: 30px;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
     }
     
-    .drawn-numbers {
+    #bet-input {
+        border-radius: 20px;
+        height: 40px;
+        width: 150px; 
+        margin-bottom: 40px;
+        margin-left: -7px;
+        color: #B02213; 
+        background-color: #FFE8C2; 
+        border: 2px solid #FFE8C2; 
+        font-size: 16px;
+        text-align: center; 
+    }  
+    
+    .bet-btn {
+        background-color: #E34D3D;
+        color: white;
+        margin-top: 70px;
+        margin-left: -8px;
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        font-family: sans-serif, impact;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; /* Extra safety for text centering */
+    }   
+
+    .time {
+        margin-top: 5px;
+        margin-left: -10px;
+        font-size: 30px;
+        font-family: sans-serif, calibri;
+        color: white;
+    } 
+
+    .line {
+        width: 300px;
+        background-color: white;
+        position: absolute;
+        margin-top: 240px;
+        height: 2px;
+
+    }
+
+    /* Position circles properly */
+    .circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6 {
+        width: 40px;
+        height: 40px;
+        background-color: #B02213;
+        color: white;
+        position: absolute;
+        text-align: center;
         display: flex;
         justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-    
-    .drawn-numbers span {
-        background: #004b8d;
-        padding: 10px;
+        align-items: center;
         border-radius: 50%;
-        font-size: 15px;
-    }
-    
-    .pot-money ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .pot-money li {
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 5px;
-    }
-
-    footer {
-        background: #13537e;
-        color: white;
-        text-align: center;
-        padding: 15px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: bold;
-        border-top: 3px solid rgba(255, 255, 255, 0.2);
-        position: relative;
-        bottom: -120px;
+    }
+
+    .circle-1 { 
+        top: 410px; 
+        left: 5%;
+    }
+    .circle-2 { 
+        top: 410px;  
+        left: 20%;
+    }
+    .circle-3 { 
+        top: 410px;  
+        left: 42%; 
+        transform: translateX(-50%);
+    }
+    .circle-4 { 
+        top: 410px;  
+        left: 50%; 
+    }
+    .circle-5 { 
+        top: 410px;  
+        left: 82%;
+    }
+    .circle-6 { 
+        top: 410px;  
+        left: 73%; 
+        transform: translateX(-50%); 
+    }
+
+    .bet-area {
+        background-color: #B02213;
+        position: absolute;
+        margin-top: 850px;
+        border-radius: 20px;
+        width: 225px;
+        height: 400px;
+        padding: 30px;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .pot-money {
+        border-radius: 20px;
+        height: 40px;
+        width: 170px; 
+        margin-bottom: 270px;
+        margin-left: -7px;
+        color: #B02213; 
+        background-color: #E34D3D; 
+        border: 2px solid #E34D3D;
+        position: absolute; 
+        font-size: 16px;
+        text-align: center; 
+    }  
+    
+    .pot-name {
+        color: white;
+        margin-top: -30px;
+        margin-left: 35px;
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        font-family: sans-serif, impact;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; /* Extra safety for text centering */
+    }   
+
+    
+    footer {
+        position: absolute;
+        bottom: 0; 
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
-        height: 10%;
+        text-align: center;
+        padding: 15px;
+        background-color: #DE2915;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 70px; 
+        flex-wrap: nowrap;
+    }    
+    
+    .nav-icon {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-right: 80%;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+
     }
     
-
-}    
+    
+    .nav-icon:hover {
+        color: #CC200D;
+        text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+    }
+    
+}
+>>>>>>> 63b04f6 (Updates Now)

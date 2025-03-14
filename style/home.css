@@ -1,225 +1,126 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #284F61, #2b596d);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #13537e;
-    padding: 15px 30px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.user-icon {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 8px 12px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-
-.top-bar {
-    background: #287492;
-    padding: 10px 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-.balance {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to bottom, #1e5b84, #134a70);
-    padding: 8px 15px;
-    border-radius: 20px;
-    box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.2);
-    width: fit-content;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-.coin-icon {
-    font-size: 24px;
-    color: gold;
-    margin-right: 8px;
-}
-
-.balance i.fa-peso-sign {
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-.content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-}
-
-.right-side {
-    position: absolute;
-    bottom: 30px; 
-    right: 300px; 
-}
-
-.divider {
-    width: 2px;
-    height: 90%;
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.play-button {
-    background: #1e5b84;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.2);
-}
-
-.play-button:hover {
-    background: #134a70;
-}
-
-footer {
-    background: #13537e;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    font-weight: bold;
-    border-top: 3px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-    }
-
-    .user-icon {
-        font-size: 24px;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row; 
-        gap: 15px;
+@media (min-width: 200px) and (max-width: 500px) {
+    * {
+        margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
-    nav ul li a {
-        font-size: 24px;
-        padding: 5px;
-    }
-
-    .icon {
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; 
         display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+    }
+
+    .container-bg {
+        width: 300px;
+        height: 568px;
+        position: relative;
+        overflow: hidden; 
+    }
+
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .box-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 270px; 
+        height: 65%;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    .top-bar {
-        justify-content: right;
-        padding: 10px;
+    .box-container p {
+        font-size: 30px;
+        margin-bottom: 2px;
+        color: white;
+        font-family: 'K2D', sans-serif;
     }
 
-    .balance {
-        font-size: 16px;
-        padding: 6px 12px;
+    .box-container img {
+        width: 60%;
+        height: 40%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: -130px;
+        margin-bottom: 20px;
     }
 
-    .coin-icon {
-        font-size: 20px;
+    .game-btn {
+        width: 60%;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px 5px;
+        background: #CC200D;
+        color: white;
+        font-size: 25px;
+        font-family: impact, sans-serif;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(255, 14, 14, 0.8), 
+                    0 0 20px rgba(250, 38, 38, 0.6), 
+                    0 0 30px rgba(250, 24, 24, 0.4); 
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 80px;
     }
-
-    .content {
-        flex-direction: column;
+    
+    .game-btn:hover {
+        background: #FF3B30;
+        box-shadow: 0 0 15px rgba(255, 150, 150, 1), 
+                    0 0 25px rgba(255, 80, 80, 0.8), 
+                    0 0 35px rgba(255, 0, 0, 0.6);
+    }   
+    
+    footer {
+        position: absolute;
+        bottom: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
         text-align: center;
         padding: 15px;
-    }
+        background-color: #DE2915;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 70px; 
+        flex-wrap: nowrap;
+    }    
+    
+    .nav-icon {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-right: 80%;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
 
-    .right-side {
-        position: static;
-        margin-top: 20px;
     }
-
-    .divider {
-        display: none; 
-    }
-
-    .play-button {
-        font-size: 16px;
-        padding: 10px 20px;
-        width: 80%;
-        max-width: 300px;
-        margin: 20px auto;
-    }
-
-    .right-side {
-        position: absolute;
-        bottom: 30px; 
-        right: 115px; 
+    
+    
+    .nav-icon:hover {
+        color: #CC200D;
+        text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+>>>>>>> 63b04f6 (Updates Now)
     }
     
 }
