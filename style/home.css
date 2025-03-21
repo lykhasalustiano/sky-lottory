@@ -1,4 +1,203 @@
-@media (min-width: 200px) and (max-width: 500px) {
+@media (min-width: 500px) and (max-width: 1920px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+    }
+    
+    .container-bg {
+        width: 1720px;
+        height: 810px;
+        position: relative;
+        overflow: hidden; 
+    }
+    
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .box-container {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1720px;
+        height: 700px;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-container p {
+        font-size: 70px;
+        font-family: 'K2D', sans-serif;
+        color: white;
+        text-align: center;
+        margin-left: 700px;
+        position: static;
+    }
+    
+    .box-log {
+        width: 45%;
+        height: 90%;
+        background: #B02213;
+        padding: 15px;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 800px;
+    }
+    
+    .box-log p {
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .box-log input {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 2px;
+        background: #FFE8C2;
+        color: black;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    
+    .box-container img {
+        width: 32%;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+        margin-left: 100px;
+        position: absolute;
+        margin-top: 60px;
+    }
+    
+     .game-btn {
+        width: 15%;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        top: 10px;
+        text-align: center;
+        margin-left: 700px;
+        position: static;
+        background: #CC200D;
+        color: white;
+        font-size: 40px;
+        font-family: impact, sans-serif;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(255, 14, 14, 0.8), 
+                    0 0 20px rgba(250, 38, 38, 0.6), 
+                    0 0 30px rgba(250, 24, 24, 0.4); 
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 80px;
+    }
+    
+    .game-btn:hover {
+        background: #FF3B30;
+        box-shadow: 0 0 15px rgba(255, 150, 150, 1), 
+                    0 0 25px rgba(255, 80, 80, 0.8), 
+                    0 0 35px rgba(255, 0, 0, 0.6);
+    }  
+    
+    .header-icons {
+        position: absolute;
+        bottom: 670px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background-color: #DE2915;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 70px; 
+        flex-wrap: nowrap;
+    }
+    
+    footer {
+        display: none;
+    }
+    
+    .nav-icon-1 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2140%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-2 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2350%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-3 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        top: 22px;
+        margin-left: -66%;
+        position: absolute;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    
+    .nav-icon:hover {
+        color: #CC200D;
+        text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+    }
+}
+
+
+@media (min-width: 100px) and (max-width: 500px) {
     * {
         margin: 0;
         padding: 0;
@@ -17,8 +216,8 @@
     }
 
     .container-bg {
-        width: 300px;
-        height: 568px;
+        width: 550px;
+        height: 667px;
         position: relative;
         overflow: hidden; 
     }
@@ -34,12 +233,12 @@
 
     .box-container {
         position: absolute;
-        top: 45%;
+        top: 46%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 270px; 
-        height: 65%;
-        padding: 20px;
+        height: 400px;
+        padding: 30px;
         background: rgba(58, 14, 14, 0.8);
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -51,9 +250,11 @@
 
     .box-container p {
         font-size: 30px;
-        margin-bottom: 2px;
-        color: white;
         font-family: 'K2D', sans-serif;
+        color: white;
+        text-align: center;
+        margin-left: 5px;
+        position: static;
     }
 
     .box-container img {
@@ -70,6 +271,8 @@
         width: 60%;
         display: inline-block;
         text-align: center;
+        margin-left: 10px;
+        position: static;
         text-decoration: none;
         padding: 5px 5px;
         background: #CC200D;
@@ -105,6 +308,7 @@
         align-items: center;
         gap: 70px; 
         flex-wrap: nowrap;
+        display: flex;
     }    
     
     .nav-icon {
@@ -113,6 +317,7 @@
         width: 25%;
         margin-right: 80%;
         transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
 
     }
     
@@ -120,7 +325,10 @@
     .nav-icon:hover {
         color: #CC200D;
         text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
->>>>>>> 63b04f6 (Updates Now)
+    }
+
+    .header-icons {
+        display: none;
     }
     
 }

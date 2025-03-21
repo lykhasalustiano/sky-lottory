@@ -14,24 +14,40 @@
             <i class="fa-solid fa-user prof-icon">
                 <p>PEPITO MANALITO</p>
             </i>
-            <div class="square-1">
-                <p class="balance">BALANCE:</p>
-                <P class="money">₱ 200, 00.00</P>
-            </div>
-            <div class="withdraw-btn">
-                <p>WITHDRAW</p>
-            </div>
-            <div class="square-2">
+            <div class="deposit-part">
                 <p class="deposite">DEPOSIT:</p>
                 <input class="depo" type="number">
+                <a class="deposite-btn">
+                    <p>DEPOSIT</p>
+                </a>
             </div>
-            <div class="deposite-btn">
-                <p>DEPOSITE</p>
+            <a href="../html/login.html" class="logout-btn">LOGOUT</a>
+
+            <div class="withdraw-part">
+                <p class="balance">BALANCE:</p>
+                <P class="money">₱ 200,000.00</P>
             </div>
-            <div class="logout-btn">LOGOUT</div>
+            <a href="#withdraw-box" class="withdraw-btn">
+                <p>WITHDRAW</p>
+            </a>
+            <div id="withdraw-box" class="withdraw-overlay">
+                <div class="withdraw-box">
+                    <p>Enter your amount to withdraw</p>
+                    <input type="number" class="withdraw-input" placeholder="Enter amount">
+                    <a href="#" class="close-btn">&times;</a>
+                    <a href="#" class="enter">
+                        <p>OKAY</p>
+                    </a>
+                </div>
+            </div>
 
         </div>
     </div>
+    <h1 class="header-icons">
+        <a href="home.html"><i class="fa-solid fa-house-chimney nav-icon-1"></i></a>
+        <a href="history.html"><i class="fa-solid fa-medal nav-icon-2"></i></a>
+        <a href="profile.html"><i class="fa-solid fa-user nav-icon-3"></i></a>
+    </h1>
     <footer class="footer-icons">
         <a href="home.html"><i class="fa-solid fa-house-chimney nav-icon"></i></a>
         <a href="history.html"><i class="fa-solid fa-medal nav-icon"></i></a>

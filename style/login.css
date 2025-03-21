@@ -1,3 +1,142 @@
+@media (min-width: 500px) and (max-width: 1920px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+    }
+    
+    .container-bg {
+        width: 1720px;
+        height: 810px;
+        position: relative;
+        overflow: hidden; 
+    }
+    
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .box-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1200px;
+        height: 600px;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .box-log {
+        background-color: #B02213;
+        width: 500px;
+        height: 500px;
+        margin-left: 40%;
+        border-radius: 20px;
+    }
+    
+    .box-log p {
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        font-family: sans-serif, calibri;
+        position: relative;
+        top: 90px;
+    }
+    
+    .box-log input {
+        width: 70%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        position: relative;
+        margin-left: 14%;
+        top: 100px;
+        margin-bottom: 50px;
+        background: #FFE8C2;
+        color: black;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    
+    .box-container img {
+        width: 30%;
+        height: 60%;
+        display: block;
+        margin: 0 auto;
+        margin-left: 100px;
+        position: absolute;
+        margin-top: 100px;
+    }
+    
+    .login-btn {
+        width: 70%;
+        margin-top: 60px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        background: #E34D3D;
+        color: white;
+        font-size: 25px;
+        font-family: Calibri, sans-serif;
+        border-radius: 20px;
+        margin-left: 75px;
+        top: 20px;
+        position: relative;
+        transition: background 0.3s ease;
+    }
+    
+    .login-btn:hover {
+        background: #D1322E;
+    }
+    
+    .signup-btn {
+        width: 70%;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        background: #E34D3D;
+        color: white;
+        font-size: 25px;
+        font-family: Calibri, sans-serif;
+        border-radius: 20px;
+        margin-left: 75px;
+        top: 20px;
+        position: relative;
+        transition: background 0.3s ease;
+    }
+    
+    .signup-btn:hover {
+        background: #D1322E;
+    }
+}
+
 @media (min-width: 200px) and (max-width: 500px) {
     * {
         margin: 0;
@@ -17,8 +156,8 @@
     }
 
     .container-bg {
-        width: 300px;
-        height: 568px;
+        width: 550px;
+        height: 667px;
         position: relative;
         overflow: hidden; 
     }
@@ -34,11 +173,11 @@
 
     .box-container {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 270px; 
-        height: 70%;
+        height: 400px;
         padding: 20px;
         background: rgba(58, 14, 14, 0.8);
         border-radius: 10px;
@@ -50,54 +189,61 @@
     }
 
     .box-log {
-        width: 90%;
-        height: 60%;
+        width: 220px;
+        height: 250px;
         background: #B02213;
+        margin-right: 5px;
         padding: 15px;
         border-radius: 8px;
         position: relative;
         text-align: center;
         color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        margin-top: 20px;
+        margin-top: 70px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
     }
 
     .box-log p {
-        font-size: 10px;
-        margin-bottom: 2px;
+        font-size: 15px;
+        top: 15px;
+        margin-bottom: 5px;
+        position: relative;
     }
 
     .box-log input {
-        width: 90%;
-        padding: 6px;
+        width: 160px;
+        height: 30px;
         border: none;
         border-radius: 20px;
-        margin-bottom: 2px;
+        margin-bottom: 20px;
+        bottom: 50px;
+        top: 20px;
         background: #FFE8C2;
+        position: relative;
         color: black;
-        font-size: 10px;
+        font-size: 15px;
+        text-align: center;
         font-family: Calibri, sans-serif;
     }
 
     .box-container img {
         width: 60%;
         height: 40%;
-        position: relative;
+        position: absolute;
         display: block;
         margin: 0 auto;
-        margin-top: -130px;
-        margin-bottom: 20px;
+        margin-top: -80px;
+        margin-left: 50px;
     }
 
     .login-btn {
-        width: 80%;
+        width: 70%;
         display: inline-block;
         text-align: center;
+        top: 145px;
         text-decoration: none;
         padding: 5px 10px;
         background: #E34D3D;
@@ -106,6 +252,9 @@
         font-family: Calibri, sans-serif;
         border-radius: 20px;
         transition: background 0.3s ease;
+        margin-left: 5px;
+        top: 10px;
+        position: relative;
     }
     
     .login-btn:hover {
@@ -113,17 +262,21 @@
     }
     
     .signup-btn {
-        width: 80%;
+        width: 70%;
         display: inline-block;
         text-align: center;
         text-decoration: none;
         padding: 5px 10px;
+        top: 180px;
         background: #E34D3D;
         color: white;
         font-size: 15px;
         font-family: Calibri, sans-serif;
         border-radius: 20px;
         transition: background 0.3s ease;
+        margin-left: 5px;
+        top: 15px;
+        position: relative;
     }
 
     .signup-btn:hover {
@@ -132,4 +285,3 @@
     
     
 }
->>>>>>> 63b04f6 (Updates Now)

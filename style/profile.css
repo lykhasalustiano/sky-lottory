@@ -1,3 +1,387 @@
+@media (min-width: 500px) and (max-width: 1920px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        white-space: nowrap; 
+    }
+    
+    .container-bg {
+        width: 1720px;
+        height: 810px;
+        position: relative;
+        overflow: hidden; 
+        display: flex; 
+    }
+    
+    
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .box-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1720px;
+        height: 1000px;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto; 
+        max-height: 110vh;
+    }
+    
+    .box-log {
+        width: 45%;
+        height: 90%;
+        background: #B02213;
+        padding: 15px;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 800px;
+    }
+    
+    .box-log input {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 2px;
+        background: #FFE8C2;
+        color: black;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    
+    .box-container img {
+        width: 32%;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+        margin-left: 100px;
+        position: absolute;
+        margin-top: 60px;
+    }
+    
+    .prof-icon {
+        color: red;
+        font-size: 200px;
+        width: 100px; 
+        height: 100px; 
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1200px;
+    }
+    
+    .prof-icon p {
+        color: white;
+        font-size: 35px;
+        text-align: center;
+        margin-left: -45px;
+        width: 90px;
+        margin-top: 10px; 
+        font-family: 'Calibri', sans-serif;
+        display: block; 
+        white-space: nowrap; 
+    }
+    
+    .header-icons {
+        position: absolute;
+        bottom: 670px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background-color: #DE2915;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 70px; 
+        flex-wrap: nowrap;
+    }
+    
+    .nav-icon-1 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2140%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-2 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2350%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-3 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        top: 22px;
+        margin-left: -66%;
+        position: absolute;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    footer {
+        display: none;
+    }
+    
+    .withdraw-part {
+        position: absolute;
+        top: 220px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 220px; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        background-color: #b02213;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+    
+    .balance {
+        font-size: 30px;
+        color: white;
+        font-family: sans-serif, calibri;
+        top: 15px;
+        margin-top: 20px;
+        position: fixed;
+    }
+    
+    .money {
+        font-size: 40px;
+        color: white;
+        font-family: sans-serif, calibri;
+        margin-top: 20px;
+    }
+    
+    .withdraw-btn {
+        background-color: #3892F9;
+        border-radius: 20px;
+        position: relative;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 100px; 
+        text-decoration: none;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+    
+    .withdraw-btn p {
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif, calibri;
+        text-align: center;
+        margin: 0; 
+    }    
+    
+    
+    .deposit-part {
+        position: absolute;
+        top: 500px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 220px; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        background-color: #b02213;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+    
+    .deposite {
+        font-size: 40px;
+        color: white;
+        position: relative;
+        font-family: calibri, sans-serif;
+        bottom: 10px;
+        padding: 10px;
+
+    }
+    
+    .depo {
+        color: black; 
+        border: 2px solid brown;
+        background-color: #f5e1c8; 
+        position: relative;
+        border-radius: 20px;
+        bottom: 10px;
+        padding: 15px;
+        width: 300px;
+        font-size: 16px;
+    }
+    
+    .deposite-btn {
+        background-color: #17982a;
+        border-radius: 20px;
+        position: relative;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 10px; 
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+    
+    .deposite-btn p {
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif, calibri;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .logout-btn {
+        color: red;
+        background-color: #FCB7B7;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        justify-content: center;
+        display: flex;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: -350px;
+        margin-right: 1120px;
+        font-family: sans-serif, calibri;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+    }
+
+    .enter {
+        width: 50px;
+        height: 100px;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        align-items: center;
+        font-size: 20px;
+        top: 10px;
+    }
+
+    .enter p {
+        background-color: #DE2915;
+        width: 100px;
+        height: 30px;
+        position: relative;
+        top: 10px;
+        left: 70px;
+        text-align: center;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+        border-radius: 10px;
+
+    }
+  
+    .withdraw-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .withdraw-box {
+        background: #b02213;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    .withdraw-box p {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .withdraw-input {
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 250px;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    :target {
+        display: flex;
+    }
+}
+
 @media (min-width: 200px) and (max-width: 500px) {
     * {
         margin: 0;
@@ -17,8 +401,8 @@
     }
 
     .container-bg {
-        width: 300px;
-        height: 568px;
+        width: 500px;
+        height: 675px;
         position: relative;
         overflow: hidden; 
     }
@@ -37,8 +421,8 @@
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px; 
-        height: 90%;
+        width: 500px; 
+        height: 675px;
         padding: 20px;
         background: rgba(58, 14, 14, 0.8);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -47,15 +431,17 @@
         justify-content: center;
         align-items: center;
         overflow-y: auto; 
-        max-height: 90vh;
+        max-height: 100vh;
     }
 
     .prof-icon {
         color: red;
-        font-size: 50px; /* Adjust size ng icon */
-        width: 100px; /* Fixed width */
-        height: 100px; /* Fixed height */
-        margin-bottom: 350px;
+        font-size: 50px;
+        width: 100px; 
+        height: 100px; 
+        position: relative;
+        top: 20px;
+        margin-bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,21 +454,21 @@
         text-align: center;
         margin-left: -45px;
         width: 90px;
-        margin-top: 10px; /* Adjust spacing if needed */
+        margin-top: 10px; 
         font-family: 'Calibri', sans-serif;
-        display: block; /* Ensures it stays in one line */
-        white-space: nowrap; /* Prevents text from breaking into multiple lines */
+        display: block; 
+        white-space: nowrap; 
     }
 
-    .square-1 {
+    .withdraw-part {
         position: absolute;
-        top: 135px; /* Adjust para mas malapit sa .prof-icon */
+        top: 190px; 
         left: 50%;
         transform: translateX(-50%);
         width: 250px;
-        height: 125px; /* Adjust height para di masyadong mataas */
+        height: 155px; 
         display: flex;
-        flex-direction: column; /* Para naka-stack ang Balance at amount */
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
         background-color: #b02213;
@@ -92,31 +478,33 @@
     }
     
     .balance {
-        font-size: 20px; /* Mas maliit para readable */
+        font-size: 20px;
         color: white;
         font-family: sans-serif, calibri;
         top: 15px;
+        margin-top: 10px;
         position: fixed;
     }
     
     .money {
-        font-size: 25px; /* Mas malaki para madaling makita */
+        font-size: 25px;
         color: white;
         font-family: sans-serif, calibri;
-        margin: 5px 0;
+        position: relative;
+        top: 5px;
     }
 
     .withdraw-btn {
         background-color: #3892F9;
         border-radius: 20px;
-        position: fixed;
+        position: relative;
         width: 125px;
         height: 30px;
         display: flex;
         justify-content: center;
+        text-decoration: none;
         align-items: center;
-        left: 87px; /* Adjust as needed */
-        bottom: 200px; /* Adjust as needed */
+        bottom: 290px; 
         box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
     }
     
@@ -124,7 +512,8 @@
         color: white;
         font-family: sans-serif, calibri;
         text-align: center;
-        margin: 0; /* Ensures no extra spacing */
+        font-size: 15px;
+        margin: 0; 
     }    
 
     .withdraw-btn:hover {
@@ -133,15 +522,15 @@
     }
     
 
-    .square-2 {
+    .deposit-part {
         position: absolute;
-        top: 330px; /* Adjust para mas malapit sa .prof-icon */
+        top: 370px; 
         left: 50%;
         transform: translateX(-50%);
         width: 250px;
-        height: 125px; /* Adjust height para di masyadong mataas */
+        height: 155px; 
         display: flex;
-        flex-direction: column; /* Para naka-stack ang Balance at amount */
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
         background-color: #b02213;
@@ -151,11 +540,11 @@
     }
 
     .deposite {
-        font-size: 20px;
+        font-size: 25px;
         color: white;
-        position: fixed;
+        position: relative;
         font-family: calibri, sans-serif;
-        top: 15px;
+        bottom: 10px;
         padding: 10px;
 
     }
@@ -164,23 +553,25 @@
         color: black; 
         border: 2px solid brown;
         background-color: #f5e1c8; 
+        position: relative;
         border-radius: 20px;
-        margin-top: 20px;
+        bottom: 10px;
         padding: 5px;
         font-size: 16px;
+        width: 180px;
     }
 
     .deposite-btn {
         background-color: #17982a;
         border-radius: 20px;
-        position: fixed;
+        position: relative;
         width: 125px;
         height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        left: 87px;
-        bottom: 5px; 
+        top: 5px;
+        bottom: 120px; 
         box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
     }
     
@@ -188,7 +579,8 @@
         color: white;
         font-family: sans-serif, calibri;
         text-align: center;
-        margin: 0; /* Ensures no extra spacing */
+        font-size: 15px;
+        margin: 0;
     }
 
     .logout-btn {
@@ -202,12 +594,17 @@
         border-radius: 20px;
         width: 125px;
         height: 30px;
-        margin-bottom: -580px;
+        font-size: 15px;
+        margin-top: 500px;
         font-family: sans-serif, calibri;
-        margin-bottom: -580px;
+        text-decoration: none;
+        margin-left: 0px;
         box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
     }
     
+    .header-icons {
+        display: none;
+    }
 
     footer {
         position: absolute;
@@ -238,6 +635,76 @@
     .nav-icon:hover {
         color: #CC200D;
         text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+    }
+
+    .enter {
+        width: 50px;
+        height: 100px;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        align-items: center;
+        font-size: 20px;
+        top: 10px;
+    }
+
+    .enter p {
+        background-color: #DE2915;
+        width: 100px;
+        height: 30px;
+        position: relative;
+        top: 10px;
+        left: 70px;
+        text-align: center;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+        border-radius: 10px;
+
+    }
+
+    .withdraw-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .withdraw-box {
+        background: #b02213;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+    }
+
+    .withdraw-box p {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .withdraw-input {
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 250px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    :target {
+        display: flex;
     }
     
 }

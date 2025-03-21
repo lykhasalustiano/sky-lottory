@@ -1,3 +1,309 @@
+@media (min-width: 500px) and (max-width: 1920px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0; 
+        font-family: Calibri, sans-serif;
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        white-space: nowrap; 
+    }
+    
+    .container-bg {
+        width: 1720px;
+        height: 810px;
+        position: relative;
+        overflow: hidden; 
+        display: flex; 
+    }
+    
+    
+    .container-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .outside {
+        position:absolute;
+    }
+    
+    .box-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1720px;
+        height: 1000px;
+        padding: 20px;
+        background: rgba(58, 14, 14, 0.8);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto; 
+        max-height: 110vh;
+    }
+    
+    #price-info img {
+        display: none;
+    }
+    
+    .num {
+        display: flex;
+        margin-right: 700px;
+        gap: 25px;
+        margin-bottom: 200px;
+        position: absolute;
+    }
+    
+    .num input {
+        width: 60px;
+        height: 70px;
+        background: white;
+        position: relative;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 20px; 
+        font-weight: bold; 
+        border: 2px solid #ccc;
+    }
+    
+    #price-info {
+        background-color: #DE2915;
+        position: absolute;
+        border-radius: 20px;
+        margin-bottom: 450px;
+        margin-right: 1280px;
+        width: 200px;
+    }
+    
+    #price-info p {
+        color: white;
+        font-family: sans-serif, Calibri;
+        text-align: center;
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+        display: flex;  
+        align-items: center; 
+        justify-content: center; 
+        margin: 0; 
+        padding: 0; 
+        margin-left: 25px;
+        position: relative; 
+    }
+
+    .bet-box {
+        position: absolute;
+    }
+    
+    #bet-input {
+        border-radius: 20px;
+        height: 50px;
+        width: 350px; 
+        left: 250px;
+        top: 300px;
+        margin-left: -7px;
+        color: #B02213; 
+        position: relative;
+        background-color: #FFE8C2; 
+        border: 2px solid #FFE8C2; 
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center; 
+    }  
+    
+    .bet-btn {
+        background-color: #E34D3D;
+        color: white;
+        top: 250px;
+        left: 100px;
+        margin-right: 1300px;
+        position: relative;
+        width: 125px;
+        height: 50px;
+        font-size: 30px;
+        font-family: sans-serif, impact;
+        text-decoration: none;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+    } 
+    
+    .bet-area {
+        background-color: #B02213;
+        position: absolute;
+        margin-left: 850px;
+        margin-top: 145PX;
+        width: 700px;
+        height: 730px;
+        box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .pot-money {
+        border-radius: 20px;
+        height: 50px;
+        width: 500px; 
+        top: 120px;
+        margin-bottom: 220px;
+        color: #B02213; 
+        background-color: #E34D3D; 
+        border: 2px solid #E34D3D;
+        position: absolute; 
+        font-size: 16px;
+        text-align: center; 
+    }  
+    
+    .pot-name {
+        color: white;
+        margin-top: -50px;
+        margin-left: 190px;
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        font-family: sans-serif, impact;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+    }  
+    
+    .time {
+        position: relative;
+        margin-bottom: -100px;
+        margin-left: -380px;
+        font-size: 30px;
+        font-family: sans-serif, calibri;
+        color: white;
+    } 
+
+    .line {
+        width: 1100px;
+        background-color: white;
+        position: absolute;
+        margin-top: 150px;
+        margin-right: 700px;
+        height: 2px;
+
+    }
+
+    .circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6 {
+        width: 70px;
+        height: 70px;
+        background-color: #B02213;
+        color: white;
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .circle-1 { 
+        top: 500px;  
+        left: 15%;
+    }
+    .circle-2 { 
+        top: 500px;   
+        left: 20%;
+    }
+    .circle-3 { 
+        top: 500px;  
+        left: 25%; 
+    }
+    .circle-4 { 
+        top: 500px;    
+        left: 30%; 
+    }
+    .circle-5 { 
+        top: 500px;   
+        left: 35%;
+    }
+    .circle-6 { 
+        top: 500px;    
+        left: 40%; 
+    }
+    
+    .header-icons {
+        position: absolute;
+        bottom: 670px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background-color: #DE2915;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 70px; 
+        flex-wrap: nowrap;
+    }
+    
+    .nav-icon-1 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2140%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-2 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        margin-left: 2350%;
+        top: 3px;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    .nav-icon-3 {
+        font-size: 30px;
+        color: #620A0A; 
+        width: 25%;
+        top: 22px;
+        margin-left: -66%;
+        position: absolute;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+        display: flex;
+    
+    }
+    
+    footer {
+        display: none;
+    }
+}
+
 @media (min-width: 200px) and (max-width: 500px) {
     * {
         margin: 0;
@@ -17,8 +323,8 @@
     }
 
     .container-bg {
-        width: 300px;
-        height: 568px;
+        width: 500px;
+        height: 750px;
         position: relative;
         overflow: hidden; 
     }
@@ -37,8 +343,8 @@
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px; 
-        height: 90%;
+        width: 500px; 
+        height: 700px;
         padding: 20px;
         background: rgba(58, 14, 14, 0.8);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -47,13 +353,14 @@
         justify-content: center;
         align-items: center;
         overflow-y: auto; 
-        max-height: 90vh;
+        max-height: 110vh;
     }
 
     #price-info img {
         width: 40px;
         height: 40px;
-        margin-left: 245px;
+        margin-left: 380px;
+        display: flex;
         margin-top: 5px;
         box-shadow: 2px 2px 10px 3px rgba(20, 14, 14, 0.8);
     }
@@ -61,8 +368,10 @@
     #price-info {
         background-color: #DE2915;
         position: absolute;
-        margin-bottom: 455px;
-        width: 300px;
+        margin-bottom: 550px;
+        margin-right: 0px;
+        border-radius: none;
+        width: 500px;
     }
     
     
@@ -72,6 +381,7 @@
         text-align: center;
         font-size: 15px;
         background-color: #B02213;
+        border-radius: 0;
         width: 150px;
         height: 50px;
         display: flex;  
@@ -79,74 +389,16 @@
         justify-content: center; 
         margin: 0; 
         padding: 0; 
+        margin-left: 60px;
         position: relative; 
     }
 
     .num {
         display: flex;
         justify-content: center;
+        margin-right: 0px;
         gap: 10px;
         margin-bottom: 20px;
-    }
-
-    #inp-num-1 {
-        top: 100px;
-        position: absolute;
-        margin-left: 230px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    #inp-num-2 {
-        top: 100px;
-        position: absolute;
-        margin-right: 230px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    #inp-num-3 {
-        top: 100px;
-        position: absolute;
-        margin-right: 140px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    #inp-num-4 {
-        top: 100px;
-        position: absolute;
-        margin-right: 50px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    #inp-num-5 {
-        top: 100px;
-        position: absolute;
-        margin-left: 50px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    #inp-num-6 {
-        top: 100px;
-        position: absolute;
-        margin-left: 140px;
-        width: 35px;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
     }
 
     .num input {
@@ -160,8 +412,9 @@
         border: 2px solid #ccc;
     }
 
-    .bet-box {
+    .bet-part {
         background-color: #B02213;
+        margin-bottom: 30px;
         border-radius: 20px;
         width: 225px;
         height: 150px;
@@ -176,6 +429,8 @@
         border-radius: 20px;
         height: 40px;
         width: 150px; 
+        top: 0px;
+        left: 0px;
         margin-bottom: 40px;
         margin-left: -7px;
         color: #B02213; 
@@ -190,6 +445,7 @@
         color: white;
         margin-top: 70px;
         margin-left: -8px;
+        margin-right: 0px;
         position: absolute;
         width: 100px;
         height: 30px;
@@ -202,7 +458,7 @@
     }   
 
     .time {
-        margin-top: 5px;
+        margin-bottom: 20px;
         margin-left: -10px;
         font-size: 30px;
         font-family: sans-serif, calibri;
@@ -210,10 +466,11 @@
     } 
 
     .line {
-        width: 300px;
+        width: 1100px;
         background-color: white;
         position: absolute;
-        margin-top: 240px;
+        margin-top: 500px;
+        margin-right: 700px;
         height: 2px;
 
     }
@@ -235,36 +492,37 @@
     }
 
     .circle-1 { 
-        top: 410px; 
-        left: 5%;
+        top: 500px;  
+        left: 16%;
     }
     .circle-2 { 
-        top: 410px;  
-        left: 20%;
+        top: 500px;   
+        left: 28%;
     }
     .circle-3 { 
-        top: 410px;  
-        left: 42%; 
+        top: 500px;  
+        left: 44%; 
         transform: translateX(-50%);
     }
     .circle-4 { 
-        top: 410px;  
-        left: 50%; 
+        top: 500px;    
+        left: 53%; 
     }
     .circle-5 { 
-        top: 410px;  
-        left: 82%;
+        top: 500px;   
+        left: 65%;
     }
     .circle-6 { 
-        top: 410px;  
-        left: 73%; 
+        top: 500px;    
+        left: 80%; 
         transform: translateX(-50%); 
     }
 
     .bet-area {
         background-color: #B02213;
         position: absolute;
-        margin-top: 850px;
+        margin-top: 950px;
+        margin-left: 0px;
         border-radius: 20px;
         width: 225px;
         height: 400px;
@@ -279,8 +537,8 @@
         border-radius: 20px;
         height: 40px;
         width: 170px; 
-        margin-bottom: 270px;
-        margin-left: -7px;
+        top: 60px;
+        margin-bottom: 220px;
         color: #B02213; 
         background-color: #E34D3D; 
         border: 2px solid #E34D3D;
@@ -291,7 +549,7 @@
     
     .pot-name {
         color: white;
-        margin-top: -30px;
+        margin-top: -50px;
         margin-left: 35px;
         position: absolute;
         width: 100px;
@@ -335,6 +593,9 @@
         color: #CC200D;
         text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
     }
+
+    .header-icons {
+        display: none;
+    }
     
 }
->>>>>>> 63b04f6 (Updates Now)
