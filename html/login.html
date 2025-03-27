@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\style\login.css">
-    <title>Document</title>
+    <title>MACHOTTERY</title>
 </head>
 <body>
     <div class="container-bg">
@@ -13,13 +13,73 @@
             <img src="..\assets\logo-img.png">
             <div class="box-log">
                 <p>USERNAME</p>
-                <input type="text">
+                <input type="text" id="username">
                 <p>PASSWORD</p>
-                <input type="text">
-                <a href="../html/home.html" class="login-btn">LOGIN</a>
+                <input type="password" id="password">
+                <a href="../html/home.html" class="signin-btn">LOGIN</a>
                 <a href="../html/signup.html" class="signup-btn">CREATE ACCOUNT</a>
             </div>
         </div>
     </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+            const signinButton = document.querySelector('.signin-btn');
+
+            if (!signinButton) {
+                console.error('❌ Login button not found.');
+                return;
+            }
+
+            signinButton.addEventListener('click', async function (event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                if (!username || !password) {
+                    alert('⚠️ Please fill in all fields.');
+                    return;
+                }
+
+                console.log(username, password);
+
+                await nigga(username, password);
+            });
+        });
+        
+        async function nigga(username, password) {
+            try{
+                const payload = {
+                username,
+                password
+            };
+
+            const response = await fetch(`http://localhost:3000/v1/account/sign-in`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    apikey: 'lucky'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await response.json();
+            console.log(data)
+            localStorage.setItem('user_id',data.account_id)
+
+            if (response.ok) {
+            alert(' Login successful! Redirecting...');
+            window.location.href = '../html/home.html'; 
+            } else {
+                alert(`Login failed: ${data.message}`);
+            }
+        } catch (error) {
+            console.error('Login Error:', error);
+            alert('Something went wrong. Please try again.');
+        }
+    }
+    </script>
 </body>
 </html>
+

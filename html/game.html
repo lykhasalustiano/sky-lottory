@@ -58,4 +58,65 @@
         <a href="profile.html"><i class="fa-solid fa-user nav-icon"></i></a>
     </footer>    
 </body>
+
+    <script>
+        const PORTS = [3000, 3001, 3002]; // Listahan ng ports
+        const sockets = {};
+    
+        PORTS.forEach(port => {
+            sockets[port] = new WebSocket(`ws://localhost:${port}`);
+    
+            sockets[port].onopen = () => console.log(`Connected to server on port ${port}`);
+            
+            sockets[port].onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                console.log(`Received from ${port}:`, data);
+    
+                const timerElement = document.querySelector(".timer");
+                if (timerElement && data.timer !== undefined) {
+                    const minutes = String(Math.floor(data.timer / 60)).padStart(2, "0");
+                    const seconds = String(data.timer % 60).padStart(2, "0");
+                    timerElement.textContent = `${minutes} : ${seconds}`;
+                }
+
+                const potMoneyElement = document.querySelector("#pot-money-display");
+                if (potMoneyElement && data.potMoney !== undefined) {
+                    potMoneyElement.textContent = `₱${data.potMoney.toLocaleString()}`;
+                }
+
+                const drawElement = document.querySelector(".drawn-numbers");
+                if (drawElement && data.winningNumbers !== undefined) {
+                    drawElement.innerHTML = "";
+                    data.winningNumbers.forEach(num => {
+                        const span = document.createElement("span");
+                        span.textContent = num;
+                        drawElement.appendChild(span);
+                    });
+                }
+            };
+    
+            sockets[port].onclose = () => console.log(`Disconnected from server on port ${port}`);
+            sockets[port].onerror = (error) => console.log(`WebSocket error on port ${port}:`, error);
+        });
+    
+        // Function to place a bet
+        document.querySelector(".bet-button").addEventListener("click", () => {
+            const betInput = document.querySelector(".bet-controls input");
+            const betAmount = parseInt(betInput.value, 10);
+    
+            if (betAmount > 0) {
+                // Ipadala sa WebSocket ang bet amount
+                PORTS.forEach(port => {
+                    if (sockets[port].readyState === WebSocket.OPEN) {
+                        sockets[port].send(JSON.stringify({ action: "bet", amount: betAmount }));
+                    }
+                });
+    
+                // I-reset ang bet input field 
+                betInput.value = "";
+            }
+        });
+    </script>    
+    
+</body>
 </html>

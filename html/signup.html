@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/signup.css">
-    <title>Document</title>
+    <title>MACHOTTERY</title>
 </head>
 <body>
     <div class="container-bg">
@@ -13,16 +13,69 @@
             <img src="..\assets\logo-img.png">
             <div class="box-log">
                 <p>CREATE USERNAME</p>
-                <input type="text">
-                <p>CREATE PASSWORD</p>
-                <input type="text">
+                <input type="text" id="username">
+                <p>CREATE EMAIL</p>
+                <input type="email" id="email">
+                <p>PASSWORD</p>
+                <input type="password" id="password">
                 <p>CONFIRM PASSWORD</p>
-                <input type="text">
-                <p>CONTACT NUMBER</p>
-                <input type="text">
-                <a href="../html/login.html" class="signup-btn">CREATE ACCOUNT</a>
+                <input type="password" id="confirm-password">
+                <a href="" class="signup-btn">CREATE ACCOUNT</a>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signupButton = document.querySelector('.signup-btn');
+
+            signupButton.addEventListener('click', async function (event) {
+                event.preventDefault(); 
+
+                const username = document.getElementById('username').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+                const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+                if (!username || !email || !password || !confirmPassword) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+
+                console.log(username, email, password);
+
+                await nigga(username, email, password);
+            });
+        });
+        
+        async function nigga(username, email, password) {
+            const payload = {
+                username,
+                email,
+                password
+            }
+
+            console.log(payload)
+
+            const response = await fetch(`http://localhost:3000/v1/account/sign-up`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    apikey: 'lucky'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await response.json();
+
+            alert(data.message);
+        }
+
+    </script>
 </body>
 </html>
