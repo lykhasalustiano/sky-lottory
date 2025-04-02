@@ -10,6 +10,34 @@ class HistoryController {
         this.history = new History();
     }
 
+    async getHistory(req, res) {
+        const {user_id} = req.body || {};
+        
+        try {
+            const historyData = await this.history.getHistory(user_id);
+            
+            if (!historyData || historyData.length === 0) {
+                return res.json({
+                    success: false,
+                    message: "No history found",
+                    data: null
+                });
+            }
+
+            return res.json({
+                success: true,
+                message: "History fetched successfully",
+                data: historyData
+            });
+        } catch (err) {
+            console.error(`Controller Error -> getHistory: ${err}`);
+            return res.status(500).json({
+                success: false,
+                message: err,
+                data: null
+            });
+        }
+    }
     async addHistory(req, res) {
         const {user_id, game_status, game_price} = req.body || {};
 

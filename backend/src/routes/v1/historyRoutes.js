@@ -7,7 +7,7 @@ const history = new HistoryController();
 
 historyRouter.use(authorization);
 
-// historyRouter.get("/history", history.getHistory.bind(history));
+historyRouter.get("/history", history.getHistory.bind(history));
 historyRouter.post("/add", history.addHistory.bind(history));
 
 export default historyRouter;

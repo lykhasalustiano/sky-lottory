@@ -65,54 +65,65 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const historyContainer = document.querySelector(".box-container");
-            const userId = localStorage.getItem("user_id"); // Get user ID from local storage
+        const historyContainer = document.querySelector(".box-container");
+        const userId = localStorage.getItem("user_id"); 
 
-            if (!historyContainer) {
-                console.error("❌ History container not found.");
-                return;
-            }
+        if (!historyContainer) {
+            console.error("❌ History container not found.");
+            return;
+        }
 
-            if (!userId) {
-                historyContainer.innerHTML = "<p>No user ID found. Please sign in.</p>";
-                return;
-            }
+        if (!user_id) {
+            historyContainer.innerHTML = "<p>No user ID found. Please sign in.</p>";
+            return;
+        }
 
-            async function fetchHistory() {
-                try {
-                    const response = await fetch(`http://localhost:3000/v1/history/${userId}`, {
-                        method: "GET",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "apikey": "lucky"
-                        }
-                    });
+        async function fetchHistory() {
+            try {
+                console.log("Fetching history for user ID:", user_id); 
 
-                    const data = await response.json();
-
-                    if (data.success && data.history.length > 0) {
-                        renderHistory(data.history);
-                    } else {
-                        historyContainer.innerHTML = "<p>No history found.</p>";
+                const response = await fetch(`http://localhost:3000/v1/history/${user_id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": "lucky"
                     }
-                } catch (error) {
-                    console.error("Error fetching history:", error);
-                    historyContainer.innerHTML = "<p>Failed to load history. Please try again later.</p>";
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server returned ${response.status} ${response.statusText}`);
                 }
-            }
 
-            function renderHistory(history) {
-                historyContainer.innerHTML = history.map((record, index) => `
-                    <div class="box-container box-${index + 1}">
-                        <img src="../assets/${record.status === 'win' ? 'win-img.png' : 'lost-img.png'}" alt="${record.status}">
-                        <p id="time-${index + 1}">${new Date(record.bet_time).toLocaleDateString()}</p>
-                        <p id="price-${index + 1}">₱${record.amount.toFixed(2)}</p>
-                    </div>
-                `).join("");
-            }
+                const contentType = response.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    throw new Error("Invalid JSON response from server.");
+                }
 
-            fetchHistory();
-        });
+                const data = await response.json();
+
+                if (data.success && data.history.length > 0) {
+                    renderHistory(data.history);
+                } else {
+                    historyContainer.innerHTML = "<p>No history found.</p>";
+                }
+            } catch (error) {
+                console.error("Error fetching history:", error);
+                historyContainer.innerHTML = "<p>Failed to load history. Please try again later.</p>";
+            }
+        }
+
+        function renderHistory(history) {
+            historyContainer.innerHTML = history.map((record, index) => `
+                <div class="box-container box-${index + 1}">
+                    <img src="../assets/${record.status === 'win' ? 'win-img.png' : 'lost-img.png'}" alt="${record.status}">
+                    <p id="time-${index + 1}">${new Date(record.bet_time).toLocaleDateString()}</p>
+                    <p id="price-${index + 1}">₱${record.amount.toFixed(2)}</p>
+                </div>
+            `).join("");
+        }
+
+        fetchHistory();
+    });
 
     </script>    
 </body>

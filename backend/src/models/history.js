@@ -13,18 +13,39 @@ class History {
      * @param {*} userId 
      * @returns 
      */
-    async getHistory(userId) {
+    async getHistory(user_id) {
         try {
-            const [results,] = await this.db.execute(
-                `SELECT * FROM betting_history WHERE user_id = ? ORDER BY bet_time DESC`,
-                [userId]
+            // Fetch the latest 10 bets from today and 10 from yesterday
+            const [results] = await this.db.execute(
+                `(SELECT * FROM history WHERE user_id = ? AND DATE(history_date) = CURDATE() ORDER BY history_date DESC LIMIT 10)
+                 UNION
+                 (SELECT * FROM history WHERE user_id = ? AND DATE(history_date) = CURDATE() - INTERVAL 1 DAY ORDER BY history_date DESC LIMIT 10)`,
+                [user_id, user_id]
             );
-            return results;
+    
+            // If no bets found, return a failure response
+            if (!results.length) {
+                return {
+                    success: false,
+                    message: "No betting history found.",
+                    data: null
+                };
+            }
+    
+            return results
+        
         } catch (err) {
             console.error('Models Error: history -> getHistory', err);
-            throw err;
+            return {
+                success: false,
+                message: "An error occurred while fetching history.",
+                data: null
+            };
         }
     }
+    
+    
+
 
     /**
      * Add a new betting entry
