@@ -10,14 +10,14 @@ class PotMoney {
 
     /**
      * Add money to the pot
-     * @param {*} potId 
+     * @param {*} pot_id 
      * @param {*} amount 
      * @returns 
      */
     async addMoney(pot_id, amount) {
         try {
             const [results,] = await this.db.execute(
-                `UPDATE pot_money SET pot_amount = pot_amount + ? WHERE po_id = ?`,
+                `UPDATE pot_money SET pot_amount = pot_amount + ? WHERE pot_id = ?`,
                 [amount, pot_id]
             );
             return results;

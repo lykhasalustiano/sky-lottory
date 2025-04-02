@@ -7,7 +7,7 @@ const potMoney = new PotMoneyController();
 
 potMoneyRouter.use(authorization);
 
-potMoneyRouter.post('/add-money', potMoney.addMoney.bind(potMoney));
+potMoneyRouter.put('/add-money', potMoney.addMoney.bind(potMoney));
 potMoneyRouter.post('/withdraw-money', potMoney.withdrawMoney.bind(potMoney));
 potMoneyRouter.get('/balance/:pot_id', potMoney.getBalance.bind(potMoney));
 

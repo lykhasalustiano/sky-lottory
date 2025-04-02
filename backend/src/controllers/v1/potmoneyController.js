@@ -12,10 +12,10 @@ class PotMoneyController {
      * Add money to the pot
      */
     async addMoney(req, res) {
-        const { pot_id, amount } = req.body || {};
+        const {pot_id, pot_amount} = req.body || {};
 
         try {
-            const response = await this.potMoney.addMoney(pot_id, amount);
+            const response = await this.potMoney.addMoney(pot_id, pot_amount);
             return res.json({
                 success: true,
                 message: 'Money added successfully',
