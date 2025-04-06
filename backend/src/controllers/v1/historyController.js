@@ -14,6 +14,8 @@ class HistoryController {
         const {user_id} = req.body || {};
         
         try {
+
+            console.log('ID HEREEEEEE:: 🔴🔴', user_id)
             const historyData = await this.history.getHistory(user_id);
             
             if (!historyData || historyData.length === 0) {

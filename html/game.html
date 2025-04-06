@@ -124,7 +124,6 @@
         });
 
         socket.on("updatePotMoney", (data) => {
-            console.log("UI Update - Pot Money:", data); 
             if (Array.isArray(data)) {
                 potMoneyDisplays.forEach((element, index) => {
                     element.innerText = `₱${data[index] || 0}`;

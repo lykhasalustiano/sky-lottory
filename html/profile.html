@@ -26,7 +26,7 @@
 
             <div class="withdraw-part">
                 <p class="balance">BALANCE:</p>
-                <P class="money">₱ 200,000.00</P>
+                <P class="money">0</P>
             </div>
             <a href="#withdraw-box" class="withdraw-btn">
                 <p>WITHDRAW</p>
@@ -57,10 +57,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const profileContainer = document.querySelector(".box-container");
-            const userId = localStorage.getItem("user_id"); // Get user ID from local storage
+            const userId = localStorage.getItem("user_id"); 
 
             if (!profileContainer) {
-                console.error("❌ Profile container not found.");
+                console.error("Profile container not found.");
                 return;
             }
 
@@ -71,7 +71,7 @@
 
             async function fetchProfile() {
                 try {
-                    const response = await fetch(`http://localhost:3000/v1/profile/${userId}`, {
+                    const response = await fetch(`http://localhost:3000/v1/profile/${user_id}`, {
                         method: "GET",
                         headers: {
                             "Content-Type": "application/json",
@@ -125,7 +125,7 @@
                 `;
             }
 
-            // fetchProfile();
+            fetchProfile();
         });
 
     </script>

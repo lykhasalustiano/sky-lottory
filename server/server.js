@@ -46,7 +46,7 @@ if (port === 5000) {
     return [...numbers];
   };
 
-  const checkUserWin = (user_Id, userNumbers) => {
+  const checkUserWin = (user_id, userNumbers) => {
     const correctNumbers = userNumbers.filter(number => winningNumbers.includes(number)).length;
     
     let message = '';
@@ -65,18 +65,18 @@ if (port === 5000) {
     const totalPotMoney = potMoney.reduce((acc, curr) => acc + curr, 0);
     const winners = [];
 
-    for (let userId in usersNumbers) {
-      const { message, correctNumbers } = checkUserWin(userId, usersNumbers[userId]);
-      io.emit("userResult", { userId, message }); 
+    for (let user_id in usersNumbers) {
+      const { message, correctNumbers } = checkUserWin(user_id, usersNumbers[user_id]);
+      io.emit("userResult", { user_id, message }); 
       if (correctNumbers === 6) {
-        winners.push(userId);
+        winners.push(user_id);
       }
     }
 
     if (winners.length > 0) {
       const prize = totalPotMoney / winners.length; 
       winners.forEach(winner => {
-        io.emit("prizeWon", { userId: winner, prize });
+        io.emit("prizeWon", { user_id: winner, prize });
         console.log(`User ${winner} won ₱${prize}`);
       });
     } else {
@@ -116,17 +116,17 @@ if (port === 5000) {
     socket.emit("updateTimer", timer);
     socket.emit("updateWinningNumbers", winningNumbers);
 
-    socket.on("placeBet", ({ betAmount, userId, userNumbers }) => {
-      if (betAmount > 0) {
+    socket.on("placeBet", ({ bet_amount, user_id, userNumbers }) => {
+      if (bet_amount > 0) {
         let slotIndex = potMoney.findIndex(money => money === 0);
         if (slotIndex === -1) slotIndex = Math.floor(Math.random() * 3);
         // ✈️ 🗼🗼 I FEEL BONITA
-        potMoney[slotIndex] += betAmount;
-        usersBets[userId] = betAmount;
-        usersNumbers[userId] = userNumbers; 
+        potMoney[slotIndex] += bet_amount;
+        usersBets[user_id] = bet_amount;
+        usersNumbers[user_id] = userNumbers; 
 
         io.emit("updatePotMoney", potMoney);
-        console.log(`User ${userId} placed ₱${betAmount}, Updated Pot Money: ${potMoney}`);
+        console.log(`User ${user_id} placed ₱${bet_amount}, Updated Pot Money: ${potMoney}`);
       }
     });
 
@@ -185,10 +185,10 @@ if (port === 5000) {
     socket.emit("updateTimer", timer);
     socket.emit("updateWinningNumbers", winningNumbers);
 
-    socket.on("placeBet", ({ betAmount, userId, userNumbers }) => {
-      if (betAmount > 0) {
+    socket.on("placeBet", ({ bet_amount, user_id, userNumbers }) => {
+      if (bet_amount > 0) {
         console.log(`Relaying bet from Slave ${port} to Master`);
-        masterServer.emit("placeBet", { betAmount, userId, userNumbers });
+        masterServer.emit("placeBet", { bet_amount, user_id, userNumbers });
       }
     });  
 

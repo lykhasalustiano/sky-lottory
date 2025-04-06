@@ -9,7 +9,6 @@ const account = new AccountController();
 
 accountRouter.use(authorization);
 
-// Account creation for signing up routes
 accountRouter.post('/sign-up', account.signUp.bind(account));
 accountRouter.post('/sign-in', account.signIn.bind(account));
 

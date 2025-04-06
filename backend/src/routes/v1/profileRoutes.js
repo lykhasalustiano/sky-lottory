@@ -7,9 +7,7 @@ const profile = new ProfileController();
 
 profileRouter.use(authorization);
 
-// GET v1/profile/info
 profileRouter.get("/info", profile.getProfile.bind(profile));
 profileRouter.put("/deposit", profile.deposit.bind(profile));
-// profileRouter.post("/withdraw", profile.withdraw.bind(profile));
 
 export default profileRouter;

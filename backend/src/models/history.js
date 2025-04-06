@@ -14,8 +14,9 @@ class History {
      * @returns 
      */
     async getHistory(user_id) {
+        console.log(user_id)
         try {
-            // Fetch the latest 10 bets from today and 10 from yesterday
+        
             const [results] = await this.db.execute(
                 `(SELECT * FROM history WHERE user_id = ? AND DATE(history_date) = CURDATE() ORDER BY history_date DESC LIMIT 10)
                  UNION
@@ -23,7 +24,6 @@ class History {
                 [user_id, user_id]
             );
     
-            // If no bets found, return a failure response
             if (!results.length) {
                 return {
                     success: false,
@@ -50,7 +50,7 @@ class History {
     /**
      * Add a new betting entry
      * @param {*} user_id 
-     * @param {*} amount istatus 
+     * @param {*} amount 
      * @returns 
      */
     async addHistory(user_id, amount, status) {

@@ -9,7 +9,6 @@ const game = new GameController();
 
 gameRouter.use(authorization);
 
-// Account creation for signing up routes
 gameRouter.post('/bet', game.placeBet.bind(game));
 gameRouter.post('/game-state', game.getGameState.bind(game));
 gameRouter.post('/game-number', game.drawWinningNumbers.bind(game));

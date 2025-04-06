@@ -9,16 +9,16 @@ class Game {
     /**
      * Place a bet
      * @param {*} user_id
-     * @param {*} betAmount 
+     * @param {*} bet_amount 
      * @param {*} chosenNumbers 
      * @returns 
      */
-    async placeBet(userId, betAmount, chosenNumbers) {
+    async placeBet(user_id, bet_amount, chosenNumbers) {
         try {
             const numbersString = JSON.stringify(chosenNumbers);
             const [results,] = await this.db.execute(
                 `INSERT INTO bets(user_id, bet_amount, chosen_numbers) VALUES (?, ?, ?)`,
-                [userId, betAmount, numbersString]
+                [user_id, bet_amount, numbersString]
             );
             return results;
         } catch (err) {
